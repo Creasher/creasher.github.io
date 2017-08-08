@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[txt3]]></title>
-    <url>%2F2017%2F08%2F07%2Ftxt3%2F</url>
+    <url>%2Ffirst%2F2017%2F08%2F07%2Ftxt3%2F</url>
     <content type="text"></content>
       <tags>
         <tag>test</tag>
@@ -10,7 +10,7 @@
   </entry>
   <entry>
     <title><![CDATA['测试']]></title>
-    <url>%2F2017%2F08%2F07%2F%E6%B5%8B%E8%AF%95%2F</url>
+    <url>%2Ffirst%2F2017%2F08%2F07%2F%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia,Swiftype和Algolia都只有一段时间的试用期，可以采用Hexo提供的Local Search,原理是通过hexo-generator-search插件在本地生成一个search.xml文件，搜索的时候从这个文件中根据关键字检索出相应的链接。 安装步骤安装 hexo-generator-search 等等测试]]></content>
       <categories>
         <category>搭建博客测试</category>
@@ -21,12 +21,12 @@
   </entry>
   <entry>
     <title><![CDATA[test_my_site]]></title>
-    <url>%2F2017%2F08%2F07%2Ftest-my-site%2F</url>
+    <url>%2Ffirst%2F2017%2F08%2F07%2Ftest-my-site%2F</url>
     <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F08%2F07%2Fhello-world%2F</url>
+    <url>%2Ffirst%2F2017%2F08%2F07%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
