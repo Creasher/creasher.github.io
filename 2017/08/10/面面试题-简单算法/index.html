@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="算法," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon2.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="简单面试题整理，算法模块1.关于排序算法1.1. 冒泡——选择——插入–时间复杂度O(N2)冒泡排序，选择排序和插入排序都是时间复杂度为O(N2)。 简单的说：  冒泡排序：在0-n-1序列中从第一个元素开始，依次都后面的数做对比，把最大的数字交换到第n-1位，然后在0-n-2中从第一个元素开始，依次进行上面的步骤。 选择排序：首先在0-n-1序列中找到最小的那个，将和位置0的元素交换，然后在1-">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面面试题_简单算法">
+<meta property="og:url" content="http://yoursite.com/2017/08/10/面面试题-简单算法/index.html">
+<meta property="og:site_name" content="Creasher的基地">
+<meta property="og:description" content="简单面试题整理，算法模块1.关于排序算法1.1. 冒泡——选择——插入–时间复杂度O(N2)冒泡排序，选择排序和插入排序都是时间复杂度为O(N2)。 简单的说：  冒泡排序：在0-n-1序列中从第一个元素开始，依次都后面的数做对比，把最大的数字交换到第n-1位，然后在0-n-2中从第一个元素开始，依次进行上面的步骤。 选择排序：首先在0-n-1序列中找到最小的那个，将和位置0的元素交换，然后在1-">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-10T03:27:17.348Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面面试题_简单算法">
+<meta name="twitter:description" content="简单面试题整理，算法模块1.关于排序算法1.1. 冒泡——选择——插入–时间复杂度O(N2)冒泡排序，选择排序和插入排序都是时间复杂度为O(N2)。 简单的说：  冒泡排序：在0-n-1序列中从第一个元素开始，依次都后面的数做对比，把最大的数字交换到第n-1位，然后在0-n-2中从第一个元素开始，依次进行上面的步骤。 选择排序：首先在0-n-1序列中找到最小的那个，将和位置0的元素交换，然后在1-">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/10/面面试题-简单算法/"/>
+
+
+
+
+
+  <title>面面试题_简单算法 | Creasher的基地</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Creasher的基地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/面面试题-简单算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Creasher">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Creasher的基地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">面面试题_简单算法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T11:25:31+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="简单面试题整理，算法模块"><a href="#简单面试题整理，算法模块" class="headerlink" title="简单面试题整理，算法模块"></a>简单面试题整理，算法模块</h1><h2 id="1-关于排序算法"><a href="#1-关于排序算法" class="headerlink" title="1.关于排序算法"></a>1.关于排序算法</h2><h3 id="1-1-冒泡——选择——插入–时间复杂度O-N2"><a href="#1-1-冒泡——选择——插入–时间复杂度O-N2" class="headerlink" title="1.1. 冒泡——选择——插入–时间复杂度O(N2)"></a>1.1. 冒泡——选择——插入–时间复杂度O(N2)</h3><p><strong>冒泡排序，选择排序和插入排序都是时间复杂度为O(N2)。</strong></p>
+<p>简单的说：</p>
+<ul>
+<li><strong>冒泡排序</strong>：在0-n-1序列中从第一个元素开始，依次都后面的数做对比，把最大的数字交换到第n-1位，然后在0-n-2中从第一个元素开始，依次进行上面的步骤。</li>
+<li><strong>选择排序</strong>：首先在0-n-1序列中找到最小的那个，将和位置0的元素交换，然后在1-n-1序列中找到最小的那个，和位置1的元素交换。。依次。。注意：冒泡排序是相邻比较，而选择是每一个元素和后面的每一个比较。</li>
+<li><strong>插入排序</strong>：每一趟在n-i+1个记录中选择最小的作为序列中的第i个记录，也就是说先比较序列的第1和第2个进行排序，然后将位置3的元素和之前的元素依次比较，如果比他之前的小，就进行位置交换，然后继续和之前的比较，然后依次。。。不管之前序列如何，所需的比较次数是一样的，均为n(n-1)/2。</li>
+</ul>
+<h3 id="1-2-归并–快速–堆–希尔–时间复杂度O-NlogN"><a href="#1-2-归并–快速–堆–希尔–时间复杂度O-NlogN" class="headerlink" title="1.2. 归并–快速–堆–希尔–时间复杂度O(NlogN)"></a>1.2. 归并–快速–堆–希尔–时间复杂度O(NlogN)</h3><p><strong>归并排序，快速排序，堆排序和希尔排序都是时间复杂度为O(NlogN)</strong></p>
+<p>简单的说：</p>
+<ul>
+<li><strong>归并排序</strong>：首先令序列中的每一个数看做为长度为1的有序区间，然后把相邻的区间进行合并，得到最大长度为2的有序区间，然后再合并。。。依次。1-2-4-8-。。。。（使用递归来做）</li>
+<li><strong>快速排序</strong>：其实是对冒泡排序的一种改进。首先随机选择一个数，然后将比这个数小的放在他左边，比这个数大的放在它右边。然后在对左右2边递归的调用快速排序算法。具体如何划分：首先随机选择一个枢轴，然后将枢轴放在序列第一位，然后将指针low和high分别指向需要排序的序列的头尾。当low&lt;high时，从hight所指向位置起向前搜索找到第一个关键字小于枢轴的值，然后将其放在low指向的位置，然后从low所指向的位置起向后搜索，找到第一个关键字大于枢轴的值，将其放在high指向的位置，重复过程，直到low=high。注意，如果不比轴大，则low++；如果不比low小，high–(这里是有等于号的) 则另外一种思路： 首先随机选择一个枢轴，然后将枢轴放在序列最后一位，然后设置一个小于等于区间，初始时区间长度为0，放在序列最左边，然后从左到后遍历元素，如果当前元素大于枢轴，则遍历下一个，如果小于等于，则把当前数和小于等于区间的下一个元素进行交换，然后ling令小于等于区间向后扩一个元素。依次。。直到最后一个元素，把最后的元素（枢轴）和小于等于区间的下一个元素进行交换。<br>快速排序在数据基本无序情况下优势最明显。而在最坏情况下，即数组已经有序或大致有序的情况下，每次划分只能减少一个元素，快速排序将不幸退化为冒泡排序。所以快速排序时间复杂度下界为O(nlogn)，最坏情况为O(n^2)。在实际应用中，快速排序的平均时间复杂度为O(nlogn)。</li>
+<li><strong>堆排序</strong>：首先把序列数组建立为一个大小为n的大端堆（二叉树），这时对顶元素是最大值，这时交换对顶元素和树的最后一个元素，然后把最大值脱离树结构，然后把剩余的n-1大小的堆从堆顶位置进行大端堆进行调整，然后依次。。。注意：建堆的过程可以称为”筛选”的过程，筛选从n/2个元素开始。</li>
+<li><strong>希尔排序</strong>：其实是插入排序的改良，步长是不确定的，从大到小进行调整。比如说从10/2= 5, 5/2 = 2, 2/2=1, 1/2 =0;</li>
+</ul>
+<h3 id="1-3-计数排序–基数排序–时间复杂度O-N-–思想来自于桶排序"><a href="#1-3-计数排序–基数排序–时间复杂度O-N-–思想来自于桶排序" class="headerlink" title="1.3. 计数排序–基数排序–时间复杂度O(N)–思想来自于桶排序"></a>1.3. 计数排序–基数排序–时间复杂度O(N)–思想来自于桶排序</h3><p>计数排序，基数排序的时间复杂度接近于O(N)</p>
+<ul>
+<li><strong>计数排序</strong>：首先建立从小到大的桶，然后把数据分别放到各自的桶中，然后从小到大将数据倒出桶</li>
+<li><strong>基数排序</strong>：建立从0-9的桶，然后先按照数据的各位去放入不同的桶，全部倒出后在根据十位，，依次迭代。。最后根据最高位的。。然后倒出。。</li>
+</ul>
+<h3 id="1-4-这几种算法的空间复杂度"><a href="#1-4-这几种算法的空间复杂度" class="headerlink" title="1.4. 这几种算法的空间复杂度"></a>1.4. 这几种算法的空间复杂度</h3><ul>
+<li>空间复杂度O(1):插入，选择，冒泡，堆（如果用递归实现，也是O（logN）），希尔</li>
+<li>O(logN)~O(N):快排，取决于划分的情况</li>
+<li>O(N)： 归并</li>
+<li>O(M)：计数，基数，M指选择通的数量</li>
+</ul>
+<h3 id="1-5-几种算法的稳定性"><a href="#1-5-几种算法的稳定性" class="headerlink" title="1.5. 几种算法的稳定性"></a>1.5. 几种算法的稳定性</h3><p>稳定性：假定待排序的记录序列中，存在多个具有相同的关键字的记录，若经过排序，这些记录的相对次序保持不变，则称这种排序算法是稳定的，否则称为不稳定的。</p>
+<ul>
+<li>稳定：冒泡，插入，归并，计数，基数，桶</li>
+<li>不稳定：选择，快速，希尔，堆</li>
+</ul>
+<p>一般如果数组较小，会选择插入【排序，如果数组较大，会选择快排或者其他O（NlogN）的排序。</p>
+<h3 id="1-6-时间复杂福和记录的初始排列"><a href="#1-6-时间复杂福和记录的初始排列" class="headerlink" title="1.6. 时间复杂福和记录的初始排列"></a>1.6. 时间复杂福和记录的初始排列</h3><p>时间复杂度和记录的初始排列无关的排序算法：<br>直接选择排序和堆排序还有归并排序</p>
+<p>但是比较次数，归并是有影响的</p>
+<p>堆排序和归并都是O(nlogn)，直接选择排序都是O(n2)</p>
+<h3 id="1-7-常见的会问的问题"><a href="#1-7-常见的会问的问题" class="headerlink" title="1.7. 常见的会问的问题"></a>1.7. 常见的会问的问题</h3><h4 id="1-7-1-已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。"><a href="#1-7-1-已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。" class="headerlink" title="1.7.1 已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。"></a>1.7.1 已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。</h4><ul>
+<li>首先时间复杂度为O(N)，由于我们不知道数据的大小，所以这种不考虑；</li>
+<li>然后对于O(N2)的，对于冒泡和选择，这2个的时间复杂度都是严格的O(N2)；而对于插入排序，则在这道题里面比较好。插入排序的过程是和原始顺序有关的，又已知每个元素移动的距离不超过K，所以在这道题里面，时间复杂度不会高于O(N*K);</li>
+<li>最后对于O(NlogN)的，对于归并和快排，这2个的时间复杂度和原始数据顺序是无关的；而对于堆排序，这里处理也比较好。</li>
+<li>这道题的最佳算法就是:改进后的堆排序，时间复杂度是O(NlogK)：我们已知排序后每个元素的移动距离不会超过k,所以整个序列的最小值肯定是在0到K-1里面的，将这k个数组成小根堆，堆定是最小值，然后把堆定弹出，放在数组的位置0上，然后把原序列位置k上的树，放在堆定，调整小根堆，依次。。每一次调整弹出的过程都是在k个数里面的，时间复杂度都是O(logK)。那整个的时间复杂度就是O(NlogK)</li>
+</ul>
+<h4 id="1-7-2-判断数组中是否有重复值，必须保障额外的空间复杂度是O-1"><a href="#1-7-2-判断数组中是否有重复值，必须保障额外的空间复杂度是O-1" class="headerlink" title="1.7.2 判断数组中是否有重复值，必须保障额外的空间复杂度是O(1)"></a>1.7.2 判断数组中是否有重复值，必须保障额外的空间复杂度是O(1)</h4><p>这道题如果没有空间复度的限制，是可以应用哈希表实现的。<br>如果有空间复杂度的限制，那么就先进行排序，然后相同的数会排在一起，然后，。。<br>至于排序，选择推排序，不过不能选择用递归去实现，（因为递归要用栈），而应该用别的方法去实现堆排序。</p>
+<h4 id="1-7-3-把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。"><a href="#1-7-3-把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。" class="headerlink" title="1.7.3 把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。"></a>1.7.3 把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。</h4><p>首先把2个有序数组A，B的最大值进行对比，如果A的大于B的，把最大值放A的最后的位置，然后把对应数组A的下一个元素和B的最大值进行比较。依次，直到B全部放进数组A中。<br>注意点：从后往前覆盖数组A</p>
+<hr>
+<h2 id="2-关于栈和队列–深度优先（栈），宽度优先（队列）"><a href="#2-关于栈和队列–深度优先（栈），宽度优先（队列）" class="headerlink" title="2.关于栈和队列–深度优先（栈），宽度优先（队列）"></a>2.关于栈和队列–深度优先（栈），宽度优先（队列）</h2><h3 id="2-1-定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。"><a href="#2-1-定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。" class="headerlink" title="2.1. 定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。"></a>2.1. 定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。</h3><ul>
+<li>定义2个栈。。一个就是普通的栈，另一个是当前最小的元素。</li>
+</ul>
+<h3 id="2-2-编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add-poll-peek）"><a href="#2-2-编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add-poll-peek）" class="headerlink" title="2.2. 编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add,poll,peek）"></a>2.2. 编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add,poll,peek）</h3><ul>
+<li>一个栈作为压入栈，只往里面里面压入数据-StackPush</li>
+<li>另一个栈作为弹出栈，只拿出数据-StackPop</li>
+<li>将push栈里面的全部数据倒入pop栈中</li>
+<li>如果pop里面有数据，则不能发送倒数据的行为</li>
+</ul>
+<h3 id="2-3-实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构"><a href="#2-3-实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构" class="headerlink" title="2.3. 实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构"></a>2.3. 实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构</h3><p>主要是实现2个函数</p>
+<ul>
+<li>一个是移除栈底元素并返回</li>
+<li>一个是逆序</li>
+<li>这2个函数都利用了递归</li>
+</ul>
+<h3 id="2-4-一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？"><a href="#2-4-一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？" class="headerlink" title="2.4. 一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？"></a>2.4. 一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？</h3><ul>
+<li>申请辅助栈help</li>
+<li>弹出原始栈的栈顶元素current，如果current小于等于help的栈顶元素，则将current直接压入help，如果大于，则将help元素逐渐弹出，重新压入原始栈中，直到current小于等于help栈顶元素，将current压入help。。。。</li>
+</ul>
+<hr>
+<h2 id="3-关于二分搜索（二分查找）的问题"><a href="#3-关于二分搜索（二分查找）的问题" class="headerlink" title="3. 关于二分搜索（二分查找）的问题"></a>3. 关于二分搜索（二分查找）的问题</h2><p>常见的应用场景</p>
+<ul>
+<li>在有序序列中查找一个数 -时间复杂度是O(logN)</li>
+<li>并不一定在有序序列中才能得到应用</li>
+</ul>
+<p>常见的考察点</p>
+<ul>
+<li>对于边界条件的考察以及代码实现的能力</li>
+<li>题目的变化（判断条件不同，查找对象的不同，要求返回的内容的不同）</li>
+<li>在有序循环数组中进行二分搜索</li>
+</ul>
+<p>注意：<br>用于中点的写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">一般：mid = (left+right)/2 可能会溢出</div><div class="line">更安全的写法：mid = left+(right-left)/2</div></pre></td></tr></table></figure>
+<h3 id="3-1-给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）"><a href="#3-1-给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）" class="headerlink" title="3.1. 给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）"></a>3.1. 给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）</h3><p>时间复杂度：O(logN)</p>
+<ul>
+<li>arr为空或者长度为0，返回-1，表示局部最小位置不存在</li>
+<li>如果arr长度为1，返回0</li>
+<li>如果arr长度大于1，先考虑2头，如果2头都不是，说明arr0&gt;arr1<br>arrn-1&gt;arrn-2.从2头看，趋势都是向下的。现在去看mid的位置，看他是不是局部最小。如果是就返回，如果不是，那么假设mid&gt;mid+1,那么从mid右边看趋势是减小的，那么在mid–n-1肯定存在局部最小。。。依次。</li>
+</ul>
+<h3 id="3-2-给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置"><a href="#3-2-给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置" class="headerlink" title="3.2. 给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置"></a>3.2. 给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置</h3><h4 id="3-3-给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组-1-2-3-3-4-，其有序循环数组可以是-4-1-2-3-4"><a href="#3-3-给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组-1-2-3-3-4-，其有序循环数组可以是-4-1-2-3-4" class="headerlink" title="3.3. 给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组[1,2,3,3,4]，其有序循环数组可以是[4,1,2,3,4]"></a>3.3. 给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组[1,2,3,3,4]，其有序循环数组可以是[4,1,2,3,4]</h4><h3 id="3-4-给定一个有序数组arr，其中不含有重复元素，请找到满足arr-i-i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1"><a href="#3-4-给定一个有序数组arr，其中不含有重复元素，请找到满足arr-i-i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1" class="headerlink" title="3.4. 给定一个有序数组arr，其中不含有重复元素，请找到满足arr[i]i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1."></a>3.4. 给定一个有序数组arr，其中不含有重复元素，请找到满足arr[i]i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1.</h3><ul>
+<li>首先设置指针res=-1，然后考察0和n位置的，如果arr[0]&lt;n-1或者arr[n-1]&lt;0，则返回-1</li>
+<li>考察中间位置的，如果arr[m]&gt;m,那么右边肯定是不满足的，只要考察左边</li>
+<li>如果arr[m]&lt;m，那么不考察左边了，只考察右边。</li>
+<li>如果arr[m]m，则记录下来res=m，然后考察0-m-1.</li>
+</ul>
+<h3 id="3-5-给定一颗完全二叉树的头结点head-返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。"><a href="#3-5-给定一颗完全二叉树的头结点head-返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。" class="headerlink" title="3.5. 给定一颗完全二叉树的头结点head,返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。"></a>3.5. 给定一颗完全二叉树的头结点head,返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。</h3><p>这道题最优解其实是用了二分的思想的，时间复杂度是O(logN2)。</p>
+<p>基本上可以分成2种情况</p>
+<ul>
+<li>首先找到二叉树最左边的节点，实际上是为了统计树的高度，这个最左边的节点肯定是在最后一层上面。</li>
+<li>然后找到二叉树头结点的右子树的最左边的节点。</li>
+<li>如果这个节点是在最后一层，那么说明头结点的左子树肯定是一颗满二叉树，可以用公式计算得出左边的节点个数，然后递归过程求右子树，再加上头结点。</li>
+<li>如果这个节点是不在最后一层，那么说明头结点的右子树也是一颗满二叉树，只是比左子树少一层，同样可以得出节点个数。。</li>
+<li>用递归。。</li>
+</ul>
+<h3 id="3-6-如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）-得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。"><a href="#3-6-如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）-得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。" class="headerlink" title="3.6. 如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）,得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。"></a>3.6. 如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）,得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。</h3><ul>
+<li>将次方转化为二进制的形式，然后再拆分计算。</li>
+</ul>
+<p>例如：<br><strong>10^75^ = 10^(1001011)^ = 10^64^ <em> 10^8^ </em> 10^2^ * 10^1^<br>也就是二进制为1的位置的次方数相乘。</strong></p>
+<hr>
+<h2 id="4-关于排列组合"><a href="#4-关于排列组合" class="headerlink" title="4. 关于排列组合"></a>4. 关于排列组合</h2><ol>
+<li>以高中数学为基础的古典概率计算方法。</li>
+<li>斐波那契数和卡特兰数</li>
+<li>以选择题居多</li>
+</ol>
+<h3 id="4-1-在6x9的方格中-以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。"><a href="#4-1-在6x9的方格中-以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。" class="headerlink" title="4.1. 在6x9的方格中,以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。"></a>4.1. 在6x9的方格中,以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。</h3><p>解法：<br>一共走13步，其中必然有5步向下，剩下的8步向右。所以答案就是C^5^_13 = C^8^_13 = 1287种。</p>
+<h3 id="4-2-ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？"><a href="#4-2-ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？" class="headerlink" title="4.2. ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？"></a>4.2. ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？</h3><p>问题一解答：<br>首先一共有7个人，不同的排法是7！种，其中一半是A在B左边，一半是B在A左边。所以问题一答案是7!/2种。</p>
+<p>问题二解答：<br>把A,B看做是一个人，也就是6个人的排列，答案是6!=720种</p>
+<h3 id="4-3-6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。"><a href="#4-3-6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。" class="headerlink" title="4.3. 6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。"></a>4.3. 6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。</h3><p>这个有好几种方法：<br>这里说明一种：</p>
+<ul>
+<li>首先6个人一共有6!=720种排法</li>
+<li>然后看甲和乙相邻的总数：5!*2=240种</li>
+<li>同理，甲和丙相邻的总数：5!*2=240种</li>
+<li>而甲乙相邻和甲丙相邻同时满足的时候，有：乙甲丙或者丙甲乙，有：4!*2=48种</li>
+<li>所以答案：720-240-240+48 = 288种。</li>
+</ul>
+<h3 id="4-4-10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。"><a href="#4-4-10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。" class="headerlink" title="4.4. 10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。"></a>4.4. 10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。</h3><p>用搁板思想，10个糖果，有9个空隙，放2个搁板。C^2^_9=36种</p>
+<p>例如<br>000|0000|000</p>
+<h3 id="4-5-10个不同的球放入3个不同的桶里有多少种方法。"><a href="#4-5-10个不同的球放入3个不同的桶里有多少种方法。" class="headerlink" title="4.5. 10个不同的球放入3个不同的桶里有多少种方法。"></a>4.5. 10个不同的球放入3个不同的桶里有多少种方法。</h3><p>答案是3^10^</p>
+<h3 id="4-6-有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。"><a href="#4-6-有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。" class="headerlink" title="4.6. 有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。"></a>4.6. 有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。</h3><p>分析：</p>
+<p>如果想一天吃完，1种</p>
+<p>如果2天吃完，相当于把10颗糖分成2堆，也就是9个空隙1搁板C^1^9 = 9</p>
+<p>同理如果想3天吃完 ，C^2^9</p>
+<p>4天吃完，C^3^9</p>
+<p>。。。</p>
+<p>10天吃完，C^9^9</p>
+<p>总和也就是(1+1)^9^=2^9^ = 512</p>
+<h3 id="4-7-假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n-1时，（）是合法的，但是）（为不合法"><a href="#4-7-假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n-1时，（）是合法的，但是）（为不合法" class="headerlink" title="4.7. 假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n=1时，（）是合法的，但是）（为不合法"></a>4.7. 假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n=1时，（）是合法的，但是）（为不合法</h3><p>。。。<br>卡特兰数重要公式：<br>C^n^_2n -C^n+1^<em>2n = 1/(n+1)*C^n^</em>(2n)</p>
+<h3 id="4-8-n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。"><a href="#4-8-n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。" class="headerlink" title="4.8. n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。"></a>4.8. n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。</h3><p>这2个题和是7题都是一样的。</p>
+<h3 id="4-9-求n个无差别的节点构成的二叉树有多少种不同的结构。"><a href="#4-9-求n个无差别的节点构成的二叉树有多少种不同的结构。" class="headerlink" title="4.9. 求n个无差别的节点构成的二叉树有多少种不同的结构。"></a>4.9. 求n个无差别的节点构成的二叉树有多少种不同的结构。</h3><ul>
+<li>假设n个无差别的节点构成不同的结构的数量为f(n)</li>
+<li>f(0)表示空树，所以规定种树为1种</li>
+<li>把n个节点排成一排，假设以第一个节点作为头节点，那么它的左子树为空，右子树有n-1个节点，总数是f(n-1)。所以这种情况下结构数为1*f(n-1)</li>
+<li>如果把第二个节点当做头，那么第一个节点就是左子树，总数为1，右子树有n-2个节点，总数是f(n-2).所以总结构数为1*f(n-2).</li>
+<li>依次。。</li>
+<li>以第k个节点为头:结构数为f(k-1)*f(n-k);</li>
+<li>最终累加起来</li>
+</ul>
+<p>这是卡特兰数的第二个重要公式：<br>f(n) = f(0)<em>f(n-1)+f(1)</em>f(n-2)+…..+f(n-1)f(0)<br>=1/(n+1)*C^n^_2n</p>
+<h3 id="4-10-12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？"><a href="#4-10-12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？" class="headerlink" title="4.10. 12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？"></a>4.10. 12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？</h3><p>如果把第一排的记作0，第二排的记作1.那么问题就变成了 任意前缀中不能出现1比0多的情况，和案例7一样</p>
+<hr>
+<h2 id="5-动态规划"><a href="#5-动态规划" class="headerlink" title="5. 动态规划"></a>5. 动态规划</h2><ol>
+<li>其本质是利用申请的空间来记录每一个暴力搜索的计算结果，下次要用结果的时候直接使用，而不再进行重复的递归过程。</li>
+<li>动态规划规定每一种递归状态的计算顺序，依次进行计算。</li>
+</ol>
+<p>暴力搜索-&gt; 记忆搜索-&gt;动态规划</p>
+<h3 id="5-1-找零钱问题"><a href="#5-1-找零钱问题" class="headerlink" title="5.1. 找零钱问题"></a>5.1. 找零钱问题</h3><p>如果零钱数组arr的长度为N，生成行数为N，列数为aim+1的矩阵dp, dp[i][j]的含义是在使用arr[0,…i]货币的情况下，组成钱数j有多少种方法</p>
+<p>dp[i][j]其实可以分为2种情况：</p>
+<ol>
+<li>当前i货币比总的凑的数还要大.这种情况下，肯定是不使用第i个货币的，所以dp[i][j] =dp[i-1][j];</li>
+<li>当前i货币比总的凑的数小或等于. 这种情况下，又可以分成2种可能，<br>一种可能是不使用第i个货币dp[i-1][j]，<br>另一种是使用了第i个货币dp[i][j-arr[i]]:表示使用了第i个货币，剩下的钱用前i个货币凑成的可能数。</li>
+</ol>
+<h3 id="5-2-台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法"><a href="#5-2-台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法" class="headerlink" title="5.2. 台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法"></a>5.2. 台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法</h3><p>++直接用暴力方法就可以了。++<br>如果想到达第i层台阶，那么肯定是从i-1层踏一个台阶，或者从i-2层踏2个台阶。所以</p>
+<p>f(i) = f(i-1) + f(i-2);<br>f(1) = 1;<br>f(2) = 2;<br>不要用栈，用循环</p>
+<h3 id="5-3-矩阵最小路径问题：给定一个矩阵m-从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1-3-1-0-6-1-是所有路径中路径和最小的，所以返回12"><a href="#5-3-矩阵最小路径问题：给定一个矩阵m-从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1-3-1-0-6-1-是所有路径中路径和最小的，所以返回12" class="headerlink" title="5.3. 矩阵最小路径问题：给定一个矩阵m,从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1,3,1,0,6,1 是所有路径中路径和最小的，所以返回12"></a>5.3. 矩阵最小路径问题：给定一个矩阵m,从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1,3,1,0,6,1 是所有路径中路径和最小的，所以返回12</h3><p> 1 3 5 9 </p>
+<p> 8 1 3 4 </p>
+<p> 5 0 6 1 </p>
+<p> 8 8 4 0</p>
+<p>本题是一个路径规划问题：</p>
+<p>假设句子m的大小为M*N, 行数为M，列数为N.生成大小和m一样的句子dp，行数为M，列数为N。dp[i][j]的值表示从左上角，也就是（0，0）位置，走到（i，j）位置的最小路径和。</p>
+<ol>
+<li>首先第一行和第一列，由于规则是只能向右或者向下走，所以他们是第一行/第一列累加的结果。</li>
+<li>（i，j）位置的值，dp[i][j] = m[i][j] + min(dp[i-1,j],dp[i][j-1]) .(因为到达ij位置只能2种情况)</li>
+</ol>
+<h3 id="5-4-最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-所以返回这个子序列的长度为5。给定数组arr-返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-。返回长度5。"><a href="#5-4-最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-所以返回这个子序列的长度为5。给定数组arr-返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-。返回长度5。" class="headerlink" title="5.4. 最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7],最长递增子序列为[1,3,4,8,9],所以返回这个子序列的长度为5。给定数组arr,返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7].最长递增子序列为[1,3,4,8,9]。返回长度5。"></a>5.4. 最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7],最长递增子序列为[1,3,4,8,9],所以返回这个子序列的长度为5。给定数组arr,返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7].最长递增子序列为[1,3,4,8,9]。返回长度5。</h3><p>arr: 2 1 5 3 6 4 8 9 7</p>
+<p>dp: 1 1 </p>
+<p>dp[i]表示在必须以arr[i]这个数结尾的情况下，arr[0,…,i]中的最大递增子序列长度。</p>
+<p>求dp[i],也就是求以arr[i]这个数结尾的最长递增子序列，那么在a-i-1中，任何比arr[i]小的数，都有可能是递增子序列的倒数第2个数。那么就是选择一个最大的子序列。如果都不比arr[i]小，那么dp[i]=1。</p>
+<p>所以dp[i] = max{dp[j]+1(0 &lt;= j &lt; i,arr[j] &lt; arr[i])}</p>
+<h3 id="5-5-最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1-“1A2C3D4B56”-和str2-“B1D23CA4B56”-”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。"><a href="#5-5-最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1-“1A2C3D4B56”-和str2-“B1D23CA4B56”-”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。" class="headerlink" title="5.5. 最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1 = “1A2C3D4B56” 和str2 = “B1D23CA4B56”,”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。"></a>5.5. 最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1 = “1A2C3D4B56” 和str2 = “B1D23CA4B56”,”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。</h3><p>假设str1的长度为M，str2的长度为N，生成大小为M*N的矩阵dp。dp[i][j]的含义是str1[0…i]和str2[0…j]的最长公共子序列。</p>
+<ol>
+<li>对于第一列和第一行求法一样，举第一列：dp[i][0]代表str1[0…i]和str2[0]的最长公共子序列长度。如果str1[i]str2[0]，则灵dp[i][0]为1，一旦有dp[i][0]为1，则灵dp[i+1…M][0]为1.</li>
+<li>其他位置，只有可能3种情况：<ol>
+<li>dp[i][j]的值可能是dp[i-1][j]的值。这代表str1[0…i-1]和str2[0…j]的最长公共子序列长度。</li>
+<li>同理，dp[i][j]的值也可能是dp[i][j-1]。</li>
+<li>如果str1[i]str2[j]，还可能是dp[i-1][j-1]+1的值。</li>
+</ol>
+</li>
+</ol>
+<p><strong>在以上3种可能的值中，选择最大值作为dp[i][j]的值。</strong></p>
+<h3 id="5-6-背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。"><a href="#5-6-背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。" class="headerlink" title="5.6. 背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。"></a>5.6. 背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。</h3><p>假设物品编号为1到n，一件件物品考虑是否加入背包。</p>
+<p>假设dp[x][y]表示前x件物品，不超过重量y的时候的最大价值。枚举一下第x件物品的情况：</p>
+<ol>
+<li>如果选择第x件物品，则前x-1件物品得到的重量不能超过y-w[x]。</li>
+<li>如果不选择第x件物品，那么前x-1件物品的重量不能超过y。</li>
+</ol>
+<p>所以dp[x][y]可能等于dp[x-1][y],也可能是等于dp[x-1][y-w[x]]+v[x].选择价值最大的那个。</p>
+<h3 id="5-7-给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1-“abc”，str2-“adc”，ic-5，dc-3，rc-2-从”abc”-编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2-再比如，str1-”abc”-str2-”adc”，ic-5，dc-3，rc-100-从“abc”编辑成“adc”，先删除”b”-然后插入’d’是代价最小的，所以返回8"><a href="#5-7-给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1-“abc”，str2-“adc”，ic-5，dc-3，rc-2-从”abc”-编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2-再比如，str1-”abc”-str2-”adc”，ic-5，dc-3，rc-100-从“abc”编辑成“adc”，先删除”b”-然后插入’d’是代价最小的，所以返回8" class="headerlink" title="5.7. 给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1=“abc”，str2=“adc”，ic=5，dc=3，rc=2.从”abc” 编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2.再比如，str1=”abc”,str2=”adc”，ic=5，dc=3，rc=100.从“abc”编辑成“adc”，先删除”b”,然后插入’d’是代价最小的，所以返回8."></a>5.7. 给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1=“abc”，str2=“adc”，ic=5，dc=3，rc=2.从”abc” 编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2.再比如，str1=”abc”,str2=”adc”，ic=5，dc=3，rc=100.从“abc”编辑成“adc”，先删除”b”,然后插入’d’是代价最小的，所以返回8.</h3><p>假设str1的长度为M,str2的长度为N,首先生成大小为(M+1)*(N+1)的矩阵dp,dp[i][j]表示str1[0…i-1]编辑成str2[0…j-1]的最小代价。</p>
+<ol>
+<li>dp[0][0]设置为0，表示str1空的字串编辑成str2空的字串，故代价为空。</li>
+<li>矩阵dp第一列即dp[0…M][0],dp[i][0]表示str1[0…i-1]编辑成空串的最小代价，即把str1[0…i-1]所有字符都删掉的代价，故dp[i][0]=dc*i;</li>
+<li>句子dp第一行即dp[0][0…N].dp[0][j]表示空串编辑长str2[0…j-1]的最小代价，即在空串中插入str2[0…j-1]的所有字符的代价，故dp[0][j]=ic*j </li>
+<li>其他位置，可能有4种情况<ol>
+<li>str1[0…i-1]可以先编辑成str1[0…i-2]，也就是删除字符str1[i-1],然后由str1[0…i-1]编辑成str2[0…j-1]，dp[i-1][j]的值就表示str1[0…i-2]编辑成str2[0…j-1]的最小代价，那么dp[i][j]可能等于dc+dp[i-1][j]</li>
+<li>str1[0…i-1]可以先编辑成str2[0…j-2]，然后将str2[0…j-2]插入字符str2[j-1],编辑成str2[0…j-1],dp[i][j-1]表示str1[0…i-1]编辑成str2[0…j-2]的最小代价，那么dp[i][j]可能等于dp[i][j-1]+ic</li>
+<li>如果str1[i-1]!=str2[j-1]。先把str1[0…i-1]中str1[0…i-2]的部分变为str2[0…j-2],然后把字符str1[i-1]替换成str2[j-1].这样str1[0…i-1]就编辑成str2[0…j-1]了。dp[i-1][j-1]就表示str1[0…i-2]编辑成str2[0…j-2]的最小代价，那么dp[i][j]可能等于dp[i-1][j-1]+rc</li>
+<li>如果str1[i-1]str2[j-1].先把str1[0…i-1]中str1[0…i-2]部分变成str2[0…j-2]，因此此时欺负str1[i-1]等于str2[j-1]……那么dp[i][j]可能等于dp[i-1][j-1]</li>
+</ol>
+</li>
+</ol>
+<p>选以上最小值。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechat.jpg" alt="Creasher WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpg" alt="Creasher Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDA2OC82NjIz"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/header.jpg"
+               alt="Creasher" />
+          <p class="site-author-name" itemprop="name">Creasher</p>
+           
+              <p class="site-description motion-element" itemprop="description">奔走在前端道路上的一叽</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/creasher" target="_blank" title="csdn">
+                  
+                    <i class="fa fa-fw fa-lastfm"></i>
+                  
+                    
+                      csdn
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              推荐阅读
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.alloyteam.com/nav/" title="Web前端导航" target="_blank">Web前端导航</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.36zhen.com/t?id=3448" title="前端书籍资料" target="_blank">前端书籍资料</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ife.baidu.com/" title="百度前端技术学院" target="_blank">百度前端技术学院</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wf.uisdc.com/cn/" title="google前端开发基础" target="_blank">google前端开发基础</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://developer.mozilla.org/zh-CN/" title="MDN" target="_blank">MDN</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单面试题整理，算法模块"><span class="nav-number">1.</span> <span class="nav-text">简单面试题整理，算法模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-关于排序算法"><span class="nav-number">1.1.</span> <span class="nav-text">1.关于排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-冒泡——选择——插入–时间复杂度O-N2"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1. 冒泡——选择——插入–时间复杂度O(N2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-归并–快速–堆–希尔–时间复杂度O-NlogN"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2. 归并–快速–堆–希尔–时间复杂度O(NlogN)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-计数排序–基数排序–时间复杂度O-N-–思想来自于桶排序"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3. 计数排序–基数排序–时间复杂度O(N)–思想来自于桶排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-这几种算法的空间复杂度"><span class="nav-number">1.1.4.</span> <span class="nav-text">1.4. 这几种算法的空间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-几种算法的稳定性"><span class="nav-number">1.1.5.</span> <span class="nav-text">1.5. 几种算法的稳定性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-时间复杂福和记录的初始排列"><span class="nav-number">1.1.6.</span> <span class="nav-text">1.6. 时间复杂福和记录的初始排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-常见的会问的问题"><span class="nav-number">1.1.7.</span> <span class="nav-text">1.7. 常见的会问的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7-1-已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">1.7.1 已知一个几乎有序的数组，几乎有序是指，如果把数组排好顺序的话，每个元素移动的距离不超过k，并且k相对于数组长度来说很小。请问选择什么方法对其排序比较好。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7-2-判断数组中是否有重复值，必须保障额外的空间复杂度是O-1"><span class="nav-number">1.1.7.2.</span> <span class="nav-text">1.7.2 判断数组中是否有重复值，必须保障额外的空间复杂度是O(1)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7-3-把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。"><span class="nav-number">1.1.7.3.</span> <span class="nav-text">1.7.3 把2个有序数组合并为一个数组，第一个数组空间正好可以容纳2个数组的元素。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-关于栈和队列–深度优先（栈），宽度优先（队列）"><span class="nav-number">1.2.</span> <span class="nav-text">2.关于栈和队列–深度优先（栈），宽度优先（队列）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1. 定义栈的数据结构，请在该类型中实现一个能够得到栈最小元素的min函数。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add-poll-peek）"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2. 编写一个类，只能用2个栈结构实现队列，支持队列的基本操作（add,poll,peek）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3. 实现一个栈的逆序，但是只能用递归函数和这个栈本身的操作来实现，而不能自己申请另外的数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4. 一个栈中元素类型我整型，现在想将该栈从顶到底按从大到小排序，只许申请一个栈，除此之外可以申请新的变量，但不能申请额外的数据结构。如何完成排序？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关于二分搜索（二分查找）的问题"><span class="nav-number">1.3.</span> <span class="nav-text">3. 关于二分搜索（二分查找）的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1. 给定一个无序数组arr，一直任意相邻的2个元素，值都不重复。请返回任意一个局部最小的位置。（局部最小就是值，除了2头的数，比左右2边相邻的数都小，而2头的数比有数的那一头小）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2. 给定一个有序数组arr，再给定一个整数num，请在arr中找到num这个数出现的最左边的位置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组-1-2-3-3-4-，其有序循环数组可以是-4-1-2-3-4"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">3.3. 给定一个有序循环数组arr，返回arr中的最小值。有序循环数组是指，有序数组左边任意长度的部分放到右边去，右边的部分拿到左边来。比如数组[1,2,3,3,4]，其有序循环数组可以是[4,1,2,3,4]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-给定一个有序数组arr，其中不含有重复元素，请找到满足arr-i-i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.4. 给定一个有序数组arr，其中不含有重复元素，请找到满足arr[i]i条件的最左的位置。如果所有位置上的数都不满足条件，返回-1.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-给定一颗完全二叉树的头结点head-返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。"><span class="nav-number">1.3.4.</span> <span class="nav-text">3.5. 给定一颗完全二叉树的头结点head,返回这棵树的节点个数，如果完全二叉树的节点数位N，请事先时间复杂度低于O（N）的解法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）-得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。"><span class="nav-number">1.3.5.</span> <span class="nav-text">3.6. 如何更快的求一个整数k的n次方。如果2个整数相乘并得到结果的时间复杂度是O（1）,得到整数k的N次方的过程请是想时间复杂度为O（logN）的方法。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-关于排列组合"><span class="nav-number">1.4.</span> <span class="nav-text">4. 关于排列组合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在6x9的方格中-以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1. 在6x9的方格中,以左上角为起点，后下角为重点，每次只能向下或者向右走，请问一共有多少种不同的走法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2. ABCDEFG7人站队，要求A必须在B的左边，但不要求一定相邻，请问共有多少种排法？第二问如果要求A必须在B的左边，并且一定要相邻，请问一共有多少种排法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3. 6个人排成一排，要求甲和乙不相邻，并且甲和丙不相邻的排法数。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4. 10颗相同的糖果，分给3个人，每人至少一颗问有多少种分法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-10个不同的球放入3个不同的桶里有多少种方法。"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5. 10个不同的球放入3个不同的桶里有多少种方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6. 有10颗糖，如果每天至少吃一颗，吃完位置，问有多少种不同的吃法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n-1时，（）是合法的，但是）（为不合法"><span class="nav-number">1.4.7.</span> <span class="nav-text">4.7. 假设有n对左右括号，请求出合法的排列有多少个？合法是指每一个括号都可以找到与之配对的括号，比如n=1时，（）是合法的，但是）（为不合法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。"><span class="nav-number">1.4.8.</span> <span class="nav-text">4.8. n个数进出栈的顺序有多少种？假设栈的容量无限大。再补充一个问题，2n个人排队买票，n个人拿5块钱，n个人拿10块钱，票价是5块钱1张，每个人买一张票，售货员手里没有零钱，问有多少种排队方法让售票员可以顺利卖票。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-求n个无差别的节点构成的二叉树有多少种不同的结构。"><span class="nav-number">1.4.9.</span> <span class="nav-text">4.9. 求n个无差别的节点构成的二叉树有多少种不同的结构。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？"><span class="nav-number">1.4.10.</span> <span class="nav-text">4.10. 12个高矮不同的人，排成2排，每排必须是从矮到高排列，而且第二排比对应的第一排的人高，问排列方式有多少种？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-动态规划"><span class="nav-number">1.5.</span> <span class="nav-text">5. 动态规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-找零钱问题"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1. 找零钱问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2. 台阶问题：有n级台阶，一个人一次上一级或者2级，问有多少种走完n级台阶的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-矩阵最小路径问题：给定一个矩阵m-从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1-3-1-0-6-1-是所有路径中路径和最小的，所以返回12"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3. 矩阵最小路径问题：给定一个矩阵m,从左上角开始每次只能向右或者向下走，最后到达右下角的位置，路径上所有的数字累加起来就是路径和，返回所有的路径中最小的路径和。如果给定的m如大家看到的样子，路径1,3,1,0,6,1 是所有路径中路径和最小的，所以返回12</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-所以返回这个子序列的长度为5。给定数组arr-返回arr的最长递增子序列长度。比如arr-2-1-5-3-6-4-8-9-7-最长递增子序列为-1-3-4-8-9-。返回长度5。"><span class="nav-number">1.5.4.</span> <span class="nav-text">5.4. 最长递增子序列：给定数组arr，返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7],最长递增子序列为[1,3,4,8,9],所以返回这个子序列的长度为5。给定数组arr,返回arr的最长递增子序列长度。比如arr=[2,1,5,3,6,4,8,9,7].最长递增子序列为[1,3,4,8,9]。返回长度5。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1-“1A2C3D4B56”-和str2-“B1D23CA4B56”-”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。"><span class="nav-number">1.5.5.</span> <span class="nav-text">5.5. 最长公共子序列：给定2个字符串str1和str2，返回2个字符串的最长公共子序列。例如：str1 = “1A2C3D4B56” 和str2 = “B1D23CA4B56”,”123456”或者“12C4B6”都是最长公共子序列，返回哪一个都行。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。"><span class="nav-number">1.5.6.</span> <span class="nav-text">5.6. 背包问题：一个背包有一定的承重W，有N件物品，每件都有自己的价值，记录在数组v中，也都有自己的重量，记录在数组w中，每件物品只能选择要装入背包还是不装入背包，要求在不超过背包承重的前提下，选出物品的总价值最大。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1-“abc”，str2-“adc”，ic-5，dc-3，rc-2-从”abc”-编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2-再比如，str1-”abc”-str2-”adc”，ic-5，dc-3，rc-100-从“abc”编辑成“adc”，先删除”b”-然后插入’d’是代价最小的，所以返回8"><span class="nav-number">1.5.7.</span> <span class="nav-text">5.7. 给定2个字符串str1和str2，再给定3个整数ic，dc和rc，分别代表插入，删除和替换一个字符的代价。返回将str1编辑成str2的最小代价。比如，str1=“abc”，str2=“adc”，ic=5，dc=3，rc=2.从”abc” 编辑成“adc”把‘b’替换成‘d’是代价最小的，所以返回2.再比如，str1=”abc”,str2=”adc”，ic=5，dc=3，rc=100.从“abc”编辑成“adc”，先删除”b”,然后插入’d’是代价最小的，所以返回8.</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-sun-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Creasher</span>
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user"></i><span id="busuanzi_container_site_uv">
+  访客:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<div class="theme-info">
+ 个人博客
+</div>
+<!--<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+-->
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
